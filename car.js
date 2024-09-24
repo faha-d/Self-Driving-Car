@@ -8,6 +8,15 @@ class Car {
         this.controls = new Controls()
     }
 
+    updateCarPosition() {
+        if (this.controls.forward) {
+            this.y = -5
+        }
+        if (this.controls.reverse) {
+            this.y = +5
+        }
+    }
+
     draw(canvasContext) {
         canvasContext.beginPath();
         canvasContext.rect(
